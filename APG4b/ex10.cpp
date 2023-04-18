@@ -6,11 +6,14 @@ int main(void){
     cin >> A >> B;
     int i=0, j=0;
 
+    cout << "A:";
     while(i < A){
         cout << "]";
         i++;
     }
     cout << endl;
+
+    cout << "B:";
     while(j < B){
         cout << "]";
         j++;
