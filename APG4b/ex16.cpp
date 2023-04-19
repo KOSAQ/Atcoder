@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void){
+    vector<int> data(5);
+    for(int i=0;i<data.size(); i++){
+        cin >> data.at(i);
+    }
+    bool ans = false;
+
+    for(int i=0; i<data.size()-1; i++){
+        if(data.at(i) == data.at(i+1)){
+            ans = true;
+        }
+    }
+    
+    if(ans){
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+}
