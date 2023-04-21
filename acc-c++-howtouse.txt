@@ -1,0 +1,12 @@
+acc new IDでコンテスト作成、スペースキーで問題を選択
+acc addで問題を追加
+
+touch main.cppでファイル作成
+open main.cppで開く(mac)
+
+g++ main.cpp
+oj t -d ./tests/
+で答案確認
+
+acc submit main.cpp
+で提出
