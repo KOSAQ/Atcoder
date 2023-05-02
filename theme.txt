@@ -13,3 +13,6 @@ ABC274-C:木構造
 ABC273-A:再帰
 ABC273-B:四捨五入
 ABC273-C:map
+
+ABC272-A:std:accumulate
+ABC272-B:集合の配列
