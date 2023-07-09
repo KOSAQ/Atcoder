@@ -42,7 +42,12 @@
       "id": "abc306_d",
       "label": "D",
       "title": "Poisonous Full-Course",
-      "url": "https://atcoder.jp/contests/abc306/tasks/abc306_d"
+      "url": "https://atcoder.jp/contests/abc306/tasks/abc306_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc306_e",
