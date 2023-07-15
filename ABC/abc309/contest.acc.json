@@ -42,7 +42,12 @@
       "id": "abc309_d",
       "label": "D",
       "title": "Add One Edge",
-      "url": "https://atcoder.jp/contests/abc309/tasks/abc309_d"
+      "url": "https://atcoder.jp/contests/abc309/tasks/abc309_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc309_e",

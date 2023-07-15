@@ -1,2 +1,0 @@
-・Yes/No
-cout << (条件文 ? "Yes" : "No") << endl;

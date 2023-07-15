@@ -1,3 +1,4 @@
+//https://atcoder.jp/contests/abc309/editorial/6746
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
@@ -6,30 +7,26 @@ using namespace std;
 int main(void){
     int N, K;
     cin >> N >> K;
-    int a[300009];
-    int b[300009];
+    vector<pair<int, int> > ab(N);
     long long count = 0;
-    rep2(i, 1, N){
-        cin >> a[i] >> b[i];
-        count += b[i];
+    rep(i, N){
+        cin >> ab[i].first >> ab[i].second;
+        count += ab[i].second;
     }
 
-    vector<int> day(1000000009, 0);
-    rep2(i, 1, N){
-        day[a[i]] -= b[i];
-    }
+    sort(ab.begin(), ab.end());
 
-    int ans = 1;
-    while(1){
+    if(count <= K){
+        cout << 1 << endl;
+        return 0;
+    }
+    rep(i, ab.size()){
         if(count <= K){
-            break;
+            cout << ab[i - 1].first + 1 << endl;
+            return 0;
         }
-        ans++;
-        if(day[ans] != 0){
-            
-        }
-
+        count -= ab[i].second;
     }
-
+    cout << ab.back().first + 1 << endl;
     return 0;
 }
