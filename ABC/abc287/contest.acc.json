@@ -9,7 +9,12 @@
       "id": "abc287_a",
       "label": "A",
       "title": "Majority",
-      "url": "https://atcoder.jp/contests/abc287/tasks/abc287_a"
+      "url": "https://atcoder.jp/contests/abc287/tasks/abc287_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc287_b",

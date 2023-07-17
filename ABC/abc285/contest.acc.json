@@ -9,7 +9,12 @@
       "id": "abc285_a",
       "label": "A",
       "title": "Edge Checker 2",
-      "url": "https://atcoder.jp/contests/abc285/tasks/abc285_a"
+      "url": "https://atcoder.jp/contests/abc285/tasks/abc285_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc285_b",

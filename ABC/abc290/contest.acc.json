@@ -9,7 +9,12 @@
       "id": "abc290_a",
       "label": "A",
       "title": "Contest Result",
-      "url": "https://atcoder.jp/contests/abc290/tasks/abc290_a"
+      "url": "https://atcoder.jp/contests/abc290/tasks/abc290_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc290_b",

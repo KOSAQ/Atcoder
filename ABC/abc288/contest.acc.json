@@ -9,7 +9,12 @@
       "id": "abc288_a",
       "label": "A",
       "title": "Many A+B Problems",
-      "url": "https://atcoder.jp/contests/abc288/tasks/abc288_a"
+      "url": "https://atcoder.jp/contests/abc288/tasks/abc288_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc288_b",

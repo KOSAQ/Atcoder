@@ -9,7 +9,12 @@
       "id": "abc289_a",
       "label": "A",
       "title": "flip",
-      "url": "https://atcoder.jp/contests/abc289/tasks/abc289_a"
+      "url": "https://atcoder.jp/contests/abc289/tasks/abc289_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc289_b",
