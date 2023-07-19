@@ -1,97 +1,46 @@
+//https://programming-hiroba.com/abc302-b/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep2(i, s, n) for (int i = (s); i <= (int)(n); i++)
+
+
 
 int main(void){
     int H, W;
     cin >> H >> W;
-    vector<vector<char> > S(H * 2, vector<char>(W * 2, '@'));
-
+    string S[H];
     rep(i, H){
-        rep(j, W){
-            cin >> S[i][j];
-        }
+        cin >> S[i];
     }
+    int dx[8] = {1, -1, 0, 0, 1, -1, 1, -1};
+    int dy[8] = {0, 0, 1, -1, 1, -1, -1, 1};
+
 
     rep(i, H){
         rep(j, W){
-            if(S[i][j] == 's'){
-                if(S[i][j+1] == 'n'){//yoko
-                    if(S[i][j+2] == 'u'){
-                        if(S[i][j+3] == 'k'){
-                            if(S[i][j+4] == 'e'){
-                                rep(k, 5){
-                                    cout << i+1 << " " << j+k+1 << endl;
-                                }
-                            }
-                        }
-                    }
+            rep(k, 8){
+                if(dx[k] * 4 + j < 0 || dx[k] * 4 + j >= W || dy[k] * 4 + i < 0 || dy[k] * 4 + i >= H){
+                    continue;
                 }
-                if(S[i+1][j] == 'n'){//tate
-                    if(S[i+2][j] == 'u'){
-                        if(S[i+3][j] == 'k'){
-                            if(S[i+4][j] == 'e'){
-                                rep(k, 5){
-                                    cout << i+k+1 << " " << j+1 << endl;
-                                }
-                            }
-                        }
-                    }
+                string t = "";
+                rep(l, 5){
+                    int x = dx[k] * l + j;
+                    int y = dy[k] * l + i;
+                    
+                    t += S[y][x];
                 }
-                if(S[i+1][j+1] == 'n'){
-                    if(S[i+2][j+2] == 'u'){
-                        if(S[i+3][j+3] == 'k'){
-                            if(S[i+4][j+4] == 'e'){
-                                rep(k, 5){
-                                    cout << i+k+1 << " " << j+k+1 << endl;
-                                }
-                            }
-                        }
+                if(t == "snuke"){
+                    rep(l, 5){
+                        cout << dy[k] * l + i + 1 << " " << dx[k] * l + j + 1 << endl;
                     }
+                    return 0;
                 }
             }
         }
     }
-
-    rep(i, H){
-        rep(j, W){
-            if(S[i][j] == 'e'){
-                if(S[i][j+1] == 'k'){//yoko
-                    if(S[i][j+2] == 'u'){
-                        if(S[i][j+3] == 'n'){
-                            if(S[i][j+4] == 's'){
-                                rep(k, 5){
-                                    cout << i+1 << " " << j+(4-k)+1 << endl;
-                                }
-                            }
-                        }
-                    }
-                }
-                if(S[i+1][j] == 'k'){//tate
-                    if(S[i+2][j] == 'u'){
-                        if(S[i+3][j] == 'n'){
-                            if(S[i+4][j] == 's'){
-                                rep(k, 5){
-                                    cout << i+(4-k)+1 << " " << j+1 << endl;
-                                }
-                            }
-                        }
-                    }
-                }
-                if(S[i+1][j+1] == 'k'){
-                    if(S[i+2][j+2] == 'u'){
-                        if(S[i+3][j+3] == 'n'){
-                            if(S[i+4][j+4] == 's'){
-                                rep(k, 5){
-                                    cout << i+(4-k)+1 << " " << j+(4-k)+1 << endl;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
     
     return 0;
 }
