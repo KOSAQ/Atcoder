@@ -1,35 +1,50 @@
+//https://programming-hiroba.com/abc301-c/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
 int main(void){
-    string S;
-    string T;
-    cin >> S;
-    cin >> T;
+    string S, T;
+    cin >> S >> T;
+    int size = S.size();
 
     map<char, int> mpS;
     map<char, int> mpT;
 
-    rep(i, S.size()){
+    rep(i, size){
         mpS[S[i]]++;
-    }
-    rep(i, T.size()){
         mpT[T[i]]++;
     }
 
-    for(auto& pair : mpS){
-        while(pair.first >= 1 && mpT[pair.first] >= 1){
-            mpS[pair.first]--;
-            mpT[pair.first]--;
+    bool flag = true;
+    for(char ch = 'a'; ch <= 'z'; ch++){
+        if(ch == 'a' || ch == 't' || ch == 'c' || ch == 'o' || ch == 'd' || ch == 'e' || ch == 'r'){
+            if(mpS[ch] > mpT[ch]){
+                mpT['@'] -= abs(mpS[ch] - mpT[ch]);
+            }
+            else if(mpS[ch] < mpT[ch]){
+                mpS['@'] -= abs(mpS[ch] - mpT[ch]);
+            }
+        }
+        else{
+            if(mpS[ch] != mpT[ch]){
+                flag = false;
+            }
         }
     }
 
-    for(auto& pair : mpS){
-        if(pair.second > 0){
-            
-        }
+    if(mpS['@'] < 0 || mpT['@'] < 0){
+        flag = false;
     }
 
+    if(flag){
+        cout << "Yes" << endl;
+    }
+    else{
+        cout << "No" << endl;
+    }
+
+    
     return 0;
 }
