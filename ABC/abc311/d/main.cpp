@@ -5,14 +5,16 @@ using namespace std;
 
 int main(void){
     //input-----
-    int a, b, c, d;
-    cin >> a>> b >> c >> d;
-    
+    int N, M;
+    cin >> N >> M;
+    char S[209][209];
+    rep2(i, 1, N){
+        rep2(j, 1, M){
+            cin >> S[i][j];
+        }
+    }
     
     //----------
-
-    cout << (a + b) * (c - d) << endl;
-    cout << "Takahashi" << endl;
 
     return 0;
 }
