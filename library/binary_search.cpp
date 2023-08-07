@@ -1,3 +1,6 @@
+//参考にしたホームページ↓
+//https://qiita.com/ganyariya/items/33f1326154b85db465c3
+
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
